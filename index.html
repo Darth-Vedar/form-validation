@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Form validation
+        </title>
+        <style>
+            input[type=text], select, input[type=tel], textarea {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            textarea {
+                overflow: auto;
+                resize: vertical;
+            }
+            
+            input[type=submit] {
+                width: 100%;
+                background-color: #4c74af;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=radio] {
+                margin-bottom: 10px;
+            }
+            
+            input[type=submit]:hover {
+                background-color: #455da0;
+            }
+            
+            form {
+                border-radius: 5px;
+                background-color: #cbc3c3;
+                padding: 20px;
+                width: 500px;
+                margin: auto;
+            }
+
+            .regForm {
+                width: 100%;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .error {
+                color: red;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="validation2.js"></script>
+    </head>
+    <body>
+
+        <h1>Form validations</h1>
+
+        <div class="regForm">
+            <form action="thanks.html" onsubmit="submiton(event)">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+                <div id="fnameError" class="error"></div>
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                <div id="lnameError" class="error"></div>
+
+                <label for="mobielNo">Mobile number</label>
+                <input type="tel" id="mobielNo" name="mobielNo" placeholder="Your mobile no.." maxlength="10" onkeypress="return checkPhone(event)" autocomplete="off" required>
+                <div id="mobileNoError" class="error"></div>
+
+                <!-- <label for="gender">Last Name</label> -->
+                <span>Gender</span>
+                <input type="radio" id="gMale" name="gender" value="male" checked required>
+                <label for="gMale">Male</label>
+                <input type="radio" id="gFemale" name="gender" value="female" required>
+                <label for="gFemale">Female</label>
+                <input type="radio" id="gOther" name="gender" value="other" required>
+                <label for="gOther">Other</label>
+                <div id="genderError" class="error"></div>
+                <br>
+
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select country</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                <div id="countryError" class="error"></div>
+
+                <label for="address">Address</label>
+                <textarea name="" id="address" cols="5" placeholder="Your address.." required></textarea>
+                <div id="addressError" class="error"></div>
+
+                <label for="message">Message</label>
+                <textarea name="" id="message" cols="5" placeholder="Your message.." required></textarea>
+                <div id="messageError"></div>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </body>
+</html>
