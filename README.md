@@ -7,4 +7,5 @@ By using this script spamming can be prevented on the wesites.
 1. Accepts only characters in first name and last name.
 2. Accepts 10 digit mobile number.
 3. Does not accepts links in address and message field.
-Link - [https://form-validation-js-two.vercel.app/](test)
+
+Project Link - [https://form-validation-js-two.vercel.app/](https://form-validation-js-two.vercel.app/)
