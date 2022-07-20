@@ -70,30 +70,30 @@
         <div class="regForm">
             <form action="thanks.html" onsubmit="submiton(event)">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
                 <div id="fnameError" class="error"></div>
 
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
                 <div id="lnameError" class="error"></div>
 
                 <label for="mobielNo">Mobile number</label>
-                <input type="tel" id="mobielNo" name="mobielNo" placeholder="Your mobile no.." maxlength="10" onkeypress="return checkPhone(event)" autocomplete="off" required>
+                <input type="tel" id="mobielNo" name="mobielNo" placeholder="Your mobile no.." maxlength="10" onkeypress="return checkPhone(event)" autocomplete="off">
                 <div id="mobileNoError" class="error"></div>
 
                 <!-- <label for="gender">Last Name</label> -->
                 <span>Gender</span>
-                <input type="radio" id="gMale" name="gender" value="male" checked required>
+                <input type="radio" id="gMale" name="gender" value="male" checked>
                 <label for="gMale">Male</label>
-                <input type="radio" id="gFemale" name="gender" value="female" required>
+                <input type="radio" id="gFemale" name="gender" value="female">
                 <label for="gFemale">Female</label>
-                <input type="radio" id="gOther" name="gender" value="other" required>
+                <input type="radio" id="gOther" name="gender" value="other">
                 <label for="gOther">Other</label>
                 <div id="genderError" class="error"></div>
                 <br>
 
                 <label for="country">Country</label>
-                <select id="country" name="country" required>
+                <select id="country" name="country">
                     <option value="">Select country</option>
                     <option value="australia">Australia</option>
                     <option value="canada">Canada</option>
@@ -102,11 +102,11 @@
                 <div id="countryError" class="error"></div>
 
                 <label for="address">Address</label>
-                <textarea name="" id="address" cols="5" placeholder="Your address.." required></textarea>
+                <textarea name="" id="address" cols="5" placeholder="Your address.."></textarea>
                 <div id="addressError" class="error"></div>
 
                 <label for="message">Message</label>
-                <textarea name="" id="message" cols="5" placeholder="Your message.." required></textarea>
+                <textarea name="" id="message" cols="5" placeholder="Your message.."></textarea>
                 <div id="messageError" class="error"></div>
 
                 <input type="submit" value="Submit">
